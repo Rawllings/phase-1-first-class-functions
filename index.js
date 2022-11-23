@@ -16,13 +16,10 @@ returnsANamedFunction (function age(){
 })
 
 
-function returnsAnAnonymousFunction(cb) {
-    return cb();
-  }
-  returnsANamedFunction (function (){
-    return "before all";
-  })
-
   function returnsANamedFunction (){
     return function namedFunction(){};
+  }
+
+  const returnsAnAnonymousFunction = function () {
+    return "an anonymous function" ,function() {};
   }
